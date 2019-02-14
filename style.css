@@ -1,5 +1,40 @@
 /*style the game player*/
+body{
+    margin:0px auto;
+    text-align: center;
+    width: 700px;
+}
+/*create a grid to hold the pictures*/
+.gameScreen{
+    background:gray;
+}
 
 /*style pictures*/
-
+.pikachu{
+    background: peru;
+}
+.charmander{
+    background: sienna;
+}
+.squirtle{
+    background: cadetblue;
+}
+.bulbs{
+    background: seagreen;
+}
+.scoreBoard{
+    background: rebeccapurple;
+}
+.starter{
+    background: lemonchiffon;
+}
+.bestScore{
+    background: maroon;
+}
+.meScore{
+    background: coral;
+}
+.uScore{
+    background:teal;
+}
 /*add animations*/
