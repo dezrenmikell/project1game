@@ -12,6 +12,9 @@ body{
     grid-template-rows: 1fr,2fr,1fr,2fr,1fr,1fr,1fr,2fr;
     grid-template-columns: 1fr, 2fr, 2fr, 1fr;
     padding: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+
 }
 
 /*style pictures*/
@@ -48,6 +51,7 @@ body{
     background: lemonchiffon;
     grid-row: 6;
     grid-column: 2 / span 2;
+    
 }
 .bestScore{
     background: maroon;
