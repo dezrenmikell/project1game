@@ -5,12 +5,14 @@ $(document).ready(function(){
     var pusher=0;
     
     //start game logic  
-    var controller=true;   
+    var controller1=true; 
+    var controller2=true;
     //while loop to keep game playing    
-       while(controller==true){
+       while(controller1==true){
+           while (controller2==true){
 
     //make number randomizer
-    var selector= Math.floor((Math.random() * 4) + 1);
+   var selector = Math.floor((Math.random() * 4) + 1);
    //make switch statement to access divs
    if(selector==1){
        
@@ -38,7 +40,8 @@ $(document).ready(function(){
        $( ".bulbs" ).toggle( "scale" );
        comPlayer.push(selector);
         }
- 
+        controller2=false;
+ if(comPlayer.length == (humPlayer.length +1)){
 
 //create player actions
     $( ".pikachu" ).click(function() {
@@ -48,6 +51,7 @@ $(document).ready(function(){
         pusher =1;
         console.log(pusher);
         humPlayer.push(pusher);
+        controller2=true;
 
         
     });
@@ -59,6 +63,7 @@ $(document).ready(function(){
         pusher=2;
         humPlayer.push(pusher);
         console.log(pusher);
+        controller2=true;
       });
       $( '.squirtle' ).click(function() {
         document.querySelector('.squirt').play();
@@ -67,6 +72,7 @@ $(document).ready(function(){
         pusher=3;
         humPlayer.push(pusher);
         console.log(pusher);
+        controller2=true;
         });
       $( ".bulbs" ).click(function() {
         document.querySelector('.bulba').play();
@@ -75,12 +81,19 @@ $(document).ready(function(){
         pusher=4;
         humPlayer.push(pusher);
         console.log(pusher);
-      });
+        controller2=true;
+    });
+    
 
       console.log(comPlayer);
       console.log('yo');
       console.log(humPlayer);
-       controller=false;
-   }
+    }
+    else{
+       controller1=false;
+       console.log('game over');
+    }
+    }
+}
    console.log(humPlayer);
 });
