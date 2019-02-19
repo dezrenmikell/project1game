@@ -8,8 +8,8 @@ $(document).ready(function(){
     var controller1=true; 
     var controller2=true;
     //while loop to keep game playing    
-       while(controller1==true){
-           while (controller2==true){
+       //while(controller1==true){
+         //  while (controller2==true){
 
     //make number randomizer
    var selector = Math.floor((Math.random() * 4) + 1);
@@ -93,7 +93,7 @@ $(document).ready(function(){
        controller1=false;
        console.log('game over');
     }
-    }
-}
+    //}
+//}
    console.log(humPlayer);
 });
