@@ -1,8 +1,24 @@
-$(document).ready(function() {
+
   //initialize player arrays
-  var comPlayer = [];
-  var humPlayer = [];
-  var pusher = 0;
+  let comPlayer = [];
+  let humPlayer = [];
+  let sequence;
+  let turn;
+  let success;
+  let compTurn;
+  let intervalId;
+  let pokeCry = true;
+  let win;
+
+  const score = document.querySelector('.meScore');
+  const pikaBoard = document.querySelector('.pikachu');
+  const charBoard = document.querySelector('.charmander');
+  const squirtBoard = document.querySelector('.squirtle');
+  const bulbaBoard = document.querySelector('.bulbs');
+  const highScore = document.querySelector('.uScore');
+  const startButton = document.querySelector('.starter');
+
+
 
   //make number randomizer
   var selector = Math.floor(Math.random() * 4 + 1);
@@ -57,4 +73,4 @@ $(document).ready(function() {
     humPlayer.push(pusher);
     console.log(pusher);
   });
-});
+
