@@ -22,7 +22,7 @@
     score.innerHTML = 0;
     highScore.innerHTML = 0;
     clearInterval(intervalId);
-    pokeRelease();
+    //pokeRelease();
     play();
   });
 
@@ -45,70 +45,103 @@
     if (sequence == turn){
       clearInterval(intervalId);
       compTurn = false;
-      pokeRelease();
+      //pokeRelease();
     }
     if (compTurn){
-      pokeRelease();
+      //pokeRelease();
       setTimeout(()=>{
         if (comPlayer[sequence]==1) pikaChoose();
         if (comPlayer[sequence]==2) charChoose();
         if (comPlayer[sequence]==3) squirtChoose();
-        if (comPlayer[sequence]==3) bulbChoose(); 
+        if (comPlayer[sequence]==4) bulbChoose(); 
         sequence++;
       }, 200);
     }
   }
 
-  
-  //make switch statement to access divs
-  switch (selector) {
-    case 1:
-      pikaChoose();
-      comPlayer.push(selector);
-      break;
-
-    case 2:
-      charChoose();
-      comPlayer.push(selector);
-      break;
-
-    case 3:
-      squirtChoose();
-      comPlayer.push(selector);
-      break;
-
-    case 4:
-      bulbChoose();
-      comPlayer.push(selector);
-      break;
+  function pikaChoose(){
+    if(pokeCry){
+      let audio = document.querySelector('.pikaa');
+      audio.play();
+    }
+    pokeCry = true;
+    $('.pikachu').toggle('scale');
+    $('.pikachu').toggle('scale');  
   }
 
-  //create player actions
+  function charChoose(){
+    if(pokeCry){
+      let audio = document.querySelector('.charr');
+      audio.play();
+    }
+    pokeCry = true;
+    $('.charmander').toggle('scale');
+    $('.charmander').toggle('scale');
+  }
+  function squirtChoose(){
+    if(pokeCry){
+      let audio = document.querySelector('.squirtt');
+      audio.play();
+    }
+    pokeCry = true;
+    $('.squirtle').toggle('scale');
+    $('.squirtle').toggle('scale');
+  }
+  function bulbChoose(){
+    if(pokeCry){
+      let audio = document.querySelector('.bulbaa');
+      audio.play();
+    }
+    pokeCry = true;
+    $('.bulbs').toggle('scale');
+    $('.bulbs').toggle('scale');
+  }
+
+  
+  
+  //make switch statement to access divs
+   //create player actions
   $(".pikachu").click(function() {
+    humPlayer.push(1);
+    check();
     pikaChoose();
-    pusher = 1;
-    console.log(pusher);
-    humPlayer.push(pusher);
+    if(!win) {
+      setTimeout(()=>{
+        //pokeRelease();
+      }, 300);
+    }
   });
 
   $(".charmander").click(function() {
+    humPlayer.push(2);
+    check();
     charChoose();
-    pusher = 2;
-    humPlayer.push(pusher);
-    console.log(pusher);
+    if(!win) {
+      setTimeout(()=>{
+        //pokeRelease();
+      }, 300);
+    }
   });
 
   $(".squirtle").click(function() {
+    humPlayer.push(3);
+    check();
     squirtChoose();
-    pusher = 3;
-    humPlayer.push(pusher);
-    console.log(pusher);
+    if(!win) {
+      setTimeout(()=>{
+        //pokeRelease();
+      }, 300);
+    }
   });
 
   $(".bulbs").click(function() {
+    humPlayer.push(4);
+    check();
     bulbChoose();
-    pusher = 4;
-    humPlayer.push(pusher);
-    console.log(pusher);
+    if(!win) {
+      setTimeout(()=>{
+        //pokeRelease();
+      }, 300);
+    }
   });
 
