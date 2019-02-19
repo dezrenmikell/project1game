@@ -31,13 +31,14 @@
     sequence = 0;
     intervalId = 0;
     turn = 1;
-  
+    success = true;
+    //make number randomizer
+    comPlayer.push(Math.floor(Math.random() * 4 + 1));
 
   }
 
 
-  //make number randomizer
-  var selector = Math.floor(Math.random() * 4 + 1);
+  
   //make switch statement to access divs
   switch (selector) {
     case 1:
