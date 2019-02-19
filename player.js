@@ -155,7 +155,14 @@
      if(success==false){
        setTimeout(()=>{
         $('.gameScreen').toggle('scale');
-        highScore.innerHTML = sequence;
+        $('.gameScreen').toggle('scale');
+        alert("you suck!");
+        if(bestScore < (turn-1)){
+          bestScore=(turn-1);
+        }
+
+        highScore.innerHTML = bestScore;
+        score.innerHTML = 0;
           play();
        });  
       
@@ -172,9 +179,6 @@
     }
     function winGame(){
       highScore.innerHTML = turn;
+      bestScore=turn;
       win=true;
     }
-  
-
-
-      
