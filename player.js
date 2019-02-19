@@ -1,4 +1,3 @@
-
   //initialize player arrays
   let comPlayer = [];
   let humPlayer = [];
@@ -9,6 +8,7 @@
   let intervalId;
   let pokeCry = true;
   let win;
+  let bestScore = 0;
 
   const score = document.querySelector('.meScore');
   const pikaBoard = document.querySelector('.pikachu');
@@ -145,3 +145,36 @@
     }
   });
 
+  function check(){
+    if(humPlayer[humPlayer.length-1] !== comPlayer[humPlayer.length-1])
+     success=false;
+
+     if(humPlayer.length ==20 && success){
+       winGame();
+      }
+     if(success==false){
+       setTimeout(()=>{
+        $('.gameScreen').toggle('scale');
+        highScore.innerHTML = sequence;
+          play();
+       });  
+      
+      }
+      if (turn == humPlayer.length && success && !win){
+        turn++;
+        humPlayer = [];
+        compTurn = true;
+        sequence = 0;
+        score.innerHTML = turn-1;
+        intervalId = setInterval(gameTurn,800);
+
+      }
+    }
+    function winGame(){
+      highScore.innerHTML = turn;
+      win=true;
+    }
+  
+
+
+      
