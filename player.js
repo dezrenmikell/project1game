@@ -45,9 +45,7 @@ $(document).ready(function(){
 
 //create player actions
     $( ".pikachu" ).click(function() {
-        document.querySelector('.pika').play();
-        $( ".pikachu" ).toggle( "scale" );
-        $( ".pikachu" ).toggle( "scale" );
+        pikaChoose();
         pusher =1;
         console.log(pusher);
         humPlayer.push(pusher);
@@ -57,27 +55,21 @@ $(document).ready(function(){
     });
       
       $( ".charmander" ).click(function() {
-        document.querySelector('.charr').play();
-        $( ".charmander" ).toggle( "scale" );
-        $( ".charmander" ).toggle( "scale" );
+        charChoose();
         pusher=2;
         humPlayer.push(pusher);
         console.log(pusher);
         controller2=true;
       });
       $( '.squirtle' ).click(function() {
-        document.querySelector('.squirt').play();
-        $( ".squirtle" ).toggle( "scale" );
-        $( ".squirtle" ).toggle( "scale" );
+        squirtChoose();
         pusher=3;
         humPlayer.push(pusher);
         console.log(pusher);
         controller2=true;
         });
       $( ".bulbs" ).click(function() {
-        document.querySelector('.bulba').play();
-        $( ".bulbs" ).toggle( "scale" );
-        $( ".bulbs" ).toggle( "scale" );
+        bulbChoose();
         pusher=4;
         humPlayer.push(pusher);
         console.log(pusher);
