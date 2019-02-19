@@ -1,23 +1,25 @@
 function pikaChoose() {
-  document.querySelector(".pika").play();
+  document.querySelector("pikaa").play();
   $(".pikachu").toggle("scale");
   $(".pikachu").toggle("scale");
 }
 
 function charChoose() {
-  document.querySelector(".charr").play();
+  document.querySelector("charr").play();
   $(".charmander").toggle("scale");
   $(".charmander").toggle("scale");
 }
 
 function squirtChoose() {
-  document.querySelector(".squirt").play();
+  document.querySelector("squirtt").play();
   $(".squirtle").toggle("scale");
   $(".squirtle").toggle("scale");
 }
 
 function bulbChoose() {
-  document.querySelector(".bulba").play();
+  document.querySelector("bulbaa").play();
   $(".bulbs").toggle("scale");
   $(".bulbs").toggle("scale");
 }
+
+

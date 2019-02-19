@@ -10,9 +10,22 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
-    <script defer src="main.js"></script>
-    <script defer src="player.js"></script>
-    <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="style.css" />
+    <audio class="pikaa">
+        <source src="media/Pikachu.mp3"></source>
+    </audio>
+    
+    <audio class="charr">
+        <source src="media/charmander.mp3"></source>
+    </audio>
+    
+    <audio class="squirtt">
+        <source src="media/squirtle.mp3"></source>
+    </audio>
+    
+    <audio class="bulbaa">
+        <source src="media/Bulbasaur SMS tone - from YouTube.mp3"></source>
+    </audio>
   </head>
   <body>
     <h1>I CHOOSE UIUX!!</h1>
@@ -28,34 +41,15 @@
       <!--assign pictures to divs-->
       <div class="pikachu">
         <img src="images/pikachu.svg" alt="pikachu" />
-        <audio class="pika" src="media/Pikachu.mp3" type="mp3"></audio>
       </div>
       <div class="charmander">
-        <img src="images/charmander.svg" alt="charmander" />
-        <audio
-          class="charr"
-          src="media/charmander.mp3"
-          alt="charmander"
-          type="mp3"
-        ></audio>
+        <img src="images/charmander.svg" alt="charmander" />  
       </div>
       <div class="squirtle">
         <img src="images/squirtle.svg" alt="squirtle" />
-        <audio
-          class="squirt"
-          src="media/squirtle.mp3"
-          alt="squirtle"
-          type="mp3"
-        ></audio>
       </div>
       <div class="bulbs">
         <img src="images/bullbasaur.svg" alt="bullbasaur" />
-        <audio
-          class="bulba"
-          src="media/Bulbasaur SMS tone - from YouTube.mp3"
-          alt="bullbasaur"
-          type="mp3"
-        ></audio>
       </div>
 
       <!--create divs for scores
@@ -74,5 +68,8 @@
         </div>
       </div>
     </div>
+    <script defer src="main.js"></script>
+    <script defer src="player.js"></script>
+    
   </body>
 </html>
