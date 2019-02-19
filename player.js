@@ -21,6 +21,8 @@
   startButton.addEventListener('click',(event) =>{
     score.innerHTML = 0;
     highScore.innerHTML = 0;
+    clearInterval(intervalId);
+    pokeRelease();
     play();
   });
 
@@ -33,10 +35,29 @@
     turn = 1;
     success = true;
     //make number randomizer
-    comPlayer.push(Math.floor(Math.random() * 4 + 1));
-
+    for(var i=0; i<20; i++){
+      comPlayer.push(Math.floor(Math.random() * 4 + 1));
+    }
+    compTurn=true;
+    intervalId = setInterval(gameTurn, 800)
   }
-
+  function gameTurn(){
+    if (sequence == turn){
+      clearInterval(intervalId);
+      compTurn = false;
+      pokeRelease();
+    }
+    if (compTurn){
+      pokeRelease();
+      setTimeout(()=>{
+        if (comPlayer[sequence]==1) pikaChoose();
+        if (comPlayer[sequence]==2) charChoose();
+        if (comPlayer[sequence]==3) squirtChoose();
+        if (comPlayer[sequence]==3) bulbChoose(); 
+        sequence++;
+      }, 200);
+    }
+  }
 
   
   //make switch statement to access divs
