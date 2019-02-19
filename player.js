@@ -18,6 +18,22 @@
   const highScore = document.querySelector('.uScore');
   const startButton = document.querySelector('.starter');
 
+  startButton.addEventListener('click',(event) =>{
+    score.innerHTML = 0;
+    highScore.innerHTML = 0;
+    play();
+  });
+
+  function play(){
+    win = false;
+    comPlayer = [];
+    humPlayer = [];
+    sequence = 0;
+    intervalId = 0;
+    turn = 1;
+  
+
+  }
 
 
   //make number randomizer
