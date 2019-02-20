@@ -65,8 +65,8 @@
       audio.play();
     }
     pokeCry = true;
-    $('.pikachu').toggle('scale');
-    $('.pikachu').toggle('scale');  
+    $('.pikachu').fadeOut();
+    $('.pikachu').fadeIn();  
   }
 
   function charChoose(){
@@ -75,8 +75,8 @@
       audio.play();
     }
     pokeCry = true;
-    $('.charmander').toggle('scale');
-    $('.charmander').toggle('scale');
+    $('.charmander').fadeOut();
+    $('.charmander').fadeIn();
   }
   function squirtChoose(){
     if(pokeCry){
@@ -84,8 +84,8 @@
       audio.play();
     }
     pokeCry = true;
-    $('.squirtle').toggle('scale');
-    $('.squirtle').toggle('scale');
+    $('.squirtle').fadeOut();
+    $('.squirtle').fadeIn();
   }
   function bulbChoose(){
     if(pokeCry){
@@ -93,8 +93,8 @@
       audio.play();
     }
     pokeCry = true;
-    $('.bulbs').toggle('scale');
-    $('.bulbs').toggle('scale');
+    $('.bulbs').fadeOut();
+    $('.bulbs').fadeIn();
   }
 
   
@@ -154,8 +154,8 @@
       }
      if(success==false){
        setTimeout(()=>{
-        $('.gameScreen').toggle('scale');
-        $('.gameScreen').toggle('scale');
+        $('.gameScreen').fadeOut();
+        $('.gameScreen').fadeIn();
         alert("you suck!");
         if(bestScore < (turn-1)){
           bestScore=(turn-1);
