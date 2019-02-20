@@ -4,10 +4,15 @@ body{
     margin:0px auto;
     text-align: center;
     width: 700px;
+    background-image: url("images/1200px-SSBU-Kalos_Pokémon_League.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 /*create a grid to hold the pictures*/
 .gameScreen{
-    background:gray;
+    background:rgba(66, 33, 99, .3);
     display: grid;
     grid-template-rows: 1fr,2fr,1fr,2fr,1fr,1fr,1fr,2fr;
     grid-template-columns: 1fr, 2fr, 2fr, 1fr;
@@ -70,7 +75,7 @@ body{
     
 }
 .bestScore{
-    background: maroon;
+    background:rgba(211,211,211, 0.3);
     grid-row: 7 / span 2;
     grid-column: 1 / span 4;
     padding: 10px;
@@ -92,5 +97,12 @@ body{
     display: inline-block;
     padding: 30px;
 
+}
+h1{
+    color:rebeccapurple;
+}
+
+p{
+   color: rgba(211,211,211, 0.3);
 }
 /*add animations*/
