@@ -1,0 +1,23 @@
+{
+  "name": "project1game",
+  "version": "1.0.0",
+  "description": "My game selection for Project 1 was a Simon game. to put a little spin on it, I gave it a Pokemon theme.  You start by hitting the start button and following the order of the computer.   [Play Game](https://wizardly-mccarthy-031ed4.netlify.com)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dezrenmikell/project1game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dezrenmikell/project1game/issues"
+  },
+  "homepage": "https://github.com/dezrenmikell/project1game#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
